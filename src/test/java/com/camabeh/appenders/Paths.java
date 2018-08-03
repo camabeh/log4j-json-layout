@@ -1,4 +1,4 @@
-package org.jetbrains.appenders;
+package com.camabeh.appenders;
 
 import java.io.File;
 import java.util.HashSet;

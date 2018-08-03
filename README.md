@@ -65,7 +65,7 @@ property to specify the required fields to be included into the message
     log4j.rootLogger = INFO, stdout
 
     log4j.appender.stdout=org.apache.log4j.ConsoleAppender
-    log4j.appender.stdout.layout=org.jetbrains.appenders.JsonLayout
+    log4j.appender.stdout.layout=com.camabeh.appenders.JsonLayout
     log4j.appender.stdout.layout.includedFields=location
 
 After that the location will be available in the message
@@ -91,7 +91,7 @@ Included and excluded fields can be combined together
     log4j.rootLogger = INFO, stdout
 
     log4j.appender.stdout=org.apache.log4j.ConsoleAppender
-    log4j.appender.stdout.layout=org.jetbrains.appenders.JsonLayout
+    log4j.appender.stdout.layout=com.camabeh.appenders.JsonLayout
     log4j.appender.stdout.layout.includedFields=location
     log4j.appender.stdout.layout.excludedFields=exception,mdc,ndc
 
@@ -104,7 +104,7 @@ configuration properties of the layout:
     log4j.rootLogger = INFO, stdout
 
     log4j.appender.stdout=org.apache.log4j.ConsoleAppender
-    log4j.appender.stdout.layout=org.jetbrains.appenders.JsonLayout
+    log4j.appender.stdout.layout=com.camabeh.appenders.JsonLayout
     log4j.appender.stdout.layout.tags=spring,logstash
     log4j.appender.stdout.layout.fields=type:log4j,format:json
 
@@ -130,7 +130,7 @@ Existing field that needs to be renamed can be specified in the `renamedFieldLab
     log4j.rootLogger = INFO, stdout
 
     log4j.appender.stdout=org.apache.log4j.ConsoleAppender
-    log4j.appender.stdout.layout=org.jetbrains.appenders.JsonLayout
+    log4j.appender.stdout.layout=com.camabeh.appenders.JsonLayout
     log4j.appender.stdout.layout.renamedFieldLabels=level:renamed-level,exception.class:renames_class,location.file:renamed_file
     log4j.appender.stdout.layout.includedFields=location
 
@@ -169,7 +169,7 @@ If the layout is configured with an instance of `FileAppender` or any of its sub
 log messages are sent to, will also be included into the message:
 
     log4j.appender.out=org.apache.log4j.RollingFileAppender
-    log4j.appender.out.layout=org.jetbrains.appenders.JsonLayout
+    log4j.appender.out.layout=com.camabeh.appenders.JsonLayout
     log4j.appender.out.file="/tmp/logger.log"
     log4j.appender.out.append=true
     log4j.appender.out.maxFileSize=100MB

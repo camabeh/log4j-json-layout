@@ -19,7 +19,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.jetbrains.appenders</groupId>
+    <groupId>com.cambeh.appenders</groupId>
     <artifactId>log4j-1.2.17-json-layout</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -34,7 +34,7 @@
     </properties>
 
     <issueManagement>
-        <url>https://github.com/JetBrains/log4j-json-layout/issues</url>
+        <url>https://github.com/camabeh/log4j-json-layout/issues</url>
         <system>GitHub Issues</system>
     </issueManagement>
 
@@ -47,9 +47,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/JetBrains/log4j-json-layout</url>
-        <connection>scm:git:git://github.com/JetBrains/log4j-json-layout</connection>
-        <developerConnection>scm:git:git@github.com:JetBrains/log4j-json-layout</developerConnection>
+        <url>https://github.com/camabeh/log4j-json-layout</url>
+        <connection>scm:git:git://github.com/camabeh/log4j-json-layout</connection>
+        <developerConnection>scm:git:git@github.com:camabeh/log4j-json-layout</developerConnection>
     </scm>
 
     <distributionManagement>

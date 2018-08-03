@@ -1,8 +1,8 @@
-package org.jetbrains.appenders;
+package com.camabeh.appenders;
 
 /**
  * @author Eugene Petrenko (eugene.petrenko@gmail.com)
- *
+ * <p>
  * A simplistic appender to simply souport JSON logging
  */
 public class JsonFileAppender extends NextRollingFileAppender {

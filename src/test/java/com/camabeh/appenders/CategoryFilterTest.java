@@ -1,4 +1,4 @@
-package org.jetbrains.appenders;
+package com.camabeh.appenders;
 
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Level;
@@ -73,7 +73,7 @@ public class CategoryFilterTest {
 
   @Test
   public void should_filter_an_event_by_base_package() {
-    consoleFilter.setDenyCategory("org.jetbrains");
+    consoleFilter.setDenyCategory("com.camabeh");
     Logger.getLogger(getClass()).info("aaa");
 
     Assert.assertThat(consoleWriter.toString(), not(containsString("aaa")));
@@ -81,15 +81,15 @@ public class CategoryFilterTest {
 
   @Test
   public void should_not_filter_an_event_by_base_package() {
-    consoleFilter.setDenyCategory("org.jetbrains");
-    Logger.getLogger("qqqq.org.jetbrains").info("aaa");
+    consoleFilter.setDenyCategory("com.camabeh");
+    Logger.getLogger("qqqq.com.camabeh").info("aaa");
 
     Assert.assertThat(consoleWriter.toString(), containsString("aaa"));
   }
 
   @Test
   public void should_filter_an_event_by_base_package_and_level() {
-    consoleFilter.setDenyCategory("org.jetbrains");
+    consoleFilter.setDenyCategory("com.camabeh");
     consoleFilter.setMaxDenyLevel(Level.INFO);
 
     Logger.getLogger(getClass()).debug("bbb");
@@ -99,17 +99,17 @@ public class CategoryFilterTest {
 
   @Test
   public void should_not_filter_an_event_by_base_package_and_level() {
-    consoleFilter.setDenyCategory("org.jetbrains");
+    consoleFilter.setDenyCategory("com.camabeh");
     consoleFilter.setMaxDenyLevel(Level.INFO);
 
-    Logger.getLogger("qqqq.org.jetbrains.appenders").debug("bbb");
+    Logger.getLogger("qqqq.com.camabeh.appenders").debug("bbb");
 
     Assert.assertThat(consoleWriter.toString(), containsString("bbb"));
   }
 
   @Test
   public void should_not_filter_an_event_by_base_package_and_not_level() {
-    consoleFilter.setDenyCategory("org.jetbrains");
+    consoleFilter.setDenyCategory("com.camabeh");
     consoleFilter.setMaxDenyLevel(Level.INFO);
     Logger.getLogger(getClass()).warn("aaa");
 

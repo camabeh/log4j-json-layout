@@ -1,4 +1,4 @@
-package org.jetbrains.appenders;
+package com.camabeh.appenders;
 
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Layout;
